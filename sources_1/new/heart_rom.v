@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 26.05.2020 20:18:46
+// Create Date: 05/26/2020 10:18:13 PM
 // Design Name: 
-// Module Name: collision_manager
+// Module Name: heart_rom
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,25 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module collision_manager(
+module heart_rom(
+    input wire [9:0] addr, 
     input wire clk,
-    input wire[9:0] player_x,player_y,
-    input wire[9:0] bullet_x,bullet_y,
-    output wire collision
-
+    output reg [7:0] data 
     );
     
-    reg collide;
+    (*ROM_STYLE="block"*) reg [7:0] memory_array [0:836]; 
     
-    always @(posedge clk)
-    begin
-        collide = 0;
-        if ((player_x-bullet_x)**2 + (player_y-bullet_y)**2 <= 15)
-        begin
-            collide = 1;
-        end
+    initial begin
+            $readmemh("heart.mem", memory_array);
     end
-    
-    assign collision = collide;
+
+    always @ (posedge clk)
+            data <= memory_array[addr];     
     
 endmodule
