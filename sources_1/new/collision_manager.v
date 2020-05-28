@@ -33,7 +33,7 @@ module collision_manager(
     always @(posedge clk)
     begin
         collide = 0;
-        if ((player_x-bullet_x)**2 + (player_y-bullet_y)**2 <= 15)
+        if ((player_x-bullet_x)**2 + (player_y-bullet_y)**2 <=225)
         begin
             collide = 1;
         end
