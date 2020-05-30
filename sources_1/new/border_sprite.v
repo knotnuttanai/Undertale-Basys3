@@ -30,7 +30,7 @@ module border_sprite(
     
     always @(posedge clk)
     begin
-        if ((state == 1 || state == 2) && ((x>110&&x<=120&&y>90&&y<390)||(x>=520&&x<530&&y>90&&y<390)||(x>110&&x<330&&y>90&&y<=100)||(x>110&&x<330&&y>=380&&y<390)))
+        if ((state == 1 || state == 2) && ((x>110&&x<=120&&y>90&&y<390)||(x>=520&&x<530&&y>90&&y<390)||(x>110&&x<520&&y>90&&y<=100)||(x>110&&x<520&&y>=380&&y<390)))
             borderSpriteOn = 1;
         else
             borderSpriteOn = 0; 
