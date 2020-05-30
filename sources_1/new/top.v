@@ -66,17 +66,17 @@ module top(
     begin
         if (p_tick)
         begin
-            if (borderSpriteOn)
+            if (playerSpriteOn)
             begin
                 vgaRed <= (palette[(player_rgb*3)])>>4;
                 vgaGreen <= (palette[(player_rgb*3)+1])>>4;
                 vgaBlue <= (palette[(player_rgb*3)+2])>>4;
             end
-            else if (playerSpriteOn)
+            else if (borderSpriteOn)
             begin
-                vgaRed <= 4'hE;
-                vgaGreen <= 4'h1;
-                vgaBlue <= 4'h0;
+                vgaRed <= 4'hF;
+                vgaGreen <= 4'hF;
+                vgaBlue <= 4'hF;
             end
             else if (bulletSpriteOn)
             begin
