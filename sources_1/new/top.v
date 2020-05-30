@@ -50,7 +50,7 @@ module top(
     wire playerSpriteOn;
     wire[7:0] player_rgb;
     wire[1:0] hp;
-    player_sprite player(clk,keycode,state,x,y,collision,playerSpriteOn,player_rgb,hp);
+    player_sprite player(clk,keycode,state,x,y,collision,leftBorder,rightBorder,topBorder,bottomBorder,playerSpriteOn,player_rgb,hp);
     
     wire bulletSpriteOn;
     wire bullet_x,bullet_y;
@@ -84,6 +84,18 @@ module top(
                 vgaGreen <= 4'hD;
                 vgaBlue <= 4'h0;
             end
+            else
+            begin
+                vgaRed <= (palette[(COL*3)])>>4;           
+                vgaGreen <= (palette[(COL*3)+1])>>4;      
+                vgaBlue <= (palette[(COL*3)+2])>>4;      
+            end
+        end
+        else
+        begin
+            vgaRed <= 0;           
+            vgaGreen <= 0;      
+            vgaBlue <= 0;
         end
     end
     
