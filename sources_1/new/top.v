@@ -56,15 +56,21 @@ module top(
     wire bullet_x,bullet_y;
     bullet_sprite bullet(clk,state,x,y,leftBorder,rightBorder,topBorder,bottomBorder,bulletSpriteOn,bullet_x,bullet_y);
     
+    reg [7:0] palette [0:191]; // 8 bit values from the 192 hex entries in the colour palette
+    reg [7:0] COL = 0; // background colour palette value
+    initial begin
+        $readmemh("pal.mem", palette); // load 192 hex values into "palette"
+    end
+    
     always @(posedge clk)
     begin
         if (p_tick)
         begin
             if (borderSpriteOn)
             begin
-                vgaRed <= 4'hF;
-                vgaGreen <= 4'hF;
-                vgaBlue <= 4'hF;
+                vgaRed <= (palette[(player_rgb*3)])>>4;
+                vgaGreen <= (palette[(player_rgb*3)+1])>>4;
+                vgaBlue <= (palette[(player_rgb*3)+2])>>4;
             end
             else if (playerSpriteOn)
             begin
