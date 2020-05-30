@@ -26,13 +26,18 @@ module player_sprite(
     input wire[1:0] state,
     input wire[9:0] x,y,
     input wire collision,
-//    output wire[7:0] dataOut,
+    output wire[7:0] dataOut,
     output reg playerSpriteOn,
-    output wire[9:0] cx,cy,
     output reg[1:0] hp = 2'b11
     );
     
-    reg [9:0] x_reg = 320, y_reg = 240;
+    localparam playerWidth = 31;
+    localparam playerHeight = 27;
+    reg [9:0] x_reg = 305, y_reg = 227;
+    
+    reg[9:0] address;
+    
+    heart_rom heart(address,clk,dataOut);
     
     always @(posedge clk) 
     begin
@@ -57,7 +62,7 @@ module player_sprite(
     //player as a circle
     always @(posedge clk)
     begin 
-        if (state == 1 && (x-x_reg)**2 + (y-y_reg)**2 <= 400) 
+        if (state == 1 && x>=x_reg && x<x_reg+playerWidth && y>=y_reg && y<y_reg+playerHeight) 
         begin 
             playerSpriteOn = 1;
         end else
@@ -66,7 +71,4 @@ module player_sprite(
         end
     end
     
-    assign cx = x_reg;
-    assign cy = y_reg;
-             
 endmodule

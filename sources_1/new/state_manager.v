@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 26.05.2020 20:18:46
+// Create Date: 30.05.2020 15:36:44
 // Design Name: 
-// Module Name: collision_manager
+// Module Name: state_manager
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,25 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module collision_manager(
+module state_manager(
     input wire clk,
-    input wire playerSpriteOn,
-    input wire bulletSpriteOn,
-    output wire collision
-
+    output wire[1:0] state
     );
-    
-    reg collide;
-    
-    always @(posedge clk)
-    begin
-        collide = 0;
-        if (playerSpriteOn && bulletSpriteOn)
-        begin
-            collide = 1;
-        end
-    end
-    
-    assign collision = collide;
-    
+    assign state = 2'b01;
 endmodule
