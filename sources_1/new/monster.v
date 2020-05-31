@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 26.05.2020 17:47:04
+// Create Date: 31.05.2020 18:55:44
 // Design Name: 
-// Module Name: border_sprite
+// Module Name: monster
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module border_sprite(
-        input wire clk,
-        input wire [9:0] x,y,
-        input wire [3:0] state,
-        output reg borderSpriteOn=0
+module monster(
+    input wire clk,
+    input wire[9:0] damage,
+    input wire spacePressed,
+    output reg[9:0] hp=9'b111111111
     );
     
     always @(posedge clk)
     begin
-        if ((state == 1 || state == 2) && ((x>110&&x<=120&&y>90&&y<390)||(x>=520&&x<530&&y>90&&y<390)||(x>110&&x<520&&y>90&&y<=100)||(x>110&&x<520&&y>=380&&y<390)))
-            borderSpriteOn = 1;
-        else
-            borderSpriteOn = 0; 
+        if (spacePressed)
+        begin
+            if (hp <= damage) hp <= 0;
+            else hp <= hp - damage;
+        end
     end
 endmodule

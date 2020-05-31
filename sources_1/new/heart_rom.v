@@ -29,7 +29,7 @@ module heart_rom(
     (*ROM_STYLE="block"*) reg [7:0] memory_array [0:836]; 
     
     initial begin
-            $readmemh("heart.mem", memory_array);
+            $readmemh("heart15.mem", memory_array);
     end
 
     always @ (posedge clk)

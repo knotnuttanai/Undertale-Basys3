@@ -23,22 +23,37 @@
 module collision_manager(
     input wire clk,
     input wire playerSpriteOn,
-    input wire bulletSpriteOn,
-    output wire collision
+    input wire bulletSpriteOn1,
+    input wire bulletSpriteOn2,
+    input wire bulletSpriteOn3,
+    output wire collision1,
+    output wire collision2,
+    output wire collision3
 
     );
     
-    reg collide;
+    reg collide1=0,collide2=0,collide3=0;
     
     always @(posedge clk)
     begin
-        collide = 0;
-        if (playerSpriteOn && bulletSpriteOn)
-        begin
-            collide = 1;
-        end
+        if (playerSpriteOn && bulletSpriteOn1)
+            collide1 = 1;
+        else
+            collide1 = 0;
+        if (playerSpriteOn && bulletSpriteOn2)
+            collide2 = 1;
+        else
+            collide2 = 0;
+        if (playerSpriteOn && bulletSpriteOn3)
+            collide3 = 1;
+        else
+            collide3 = 0;
+        
     end
     
-    assign collision = collide;
+    assign collision1 = collide1;
+    assign collision2 = collide2;
+    assign collision3 = collide3;
+    
     
 endmodule

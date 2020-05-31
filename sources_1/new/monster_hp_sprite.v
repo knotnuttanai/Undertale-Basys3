@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 26.05.2020 17:47:04
+// Create Date: 31.05.2020 11:31:13
 // Design Name: 
-// Module Name: border_sprite
+// Module Name: monster_hp_sprite
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module border_sprite(
-        input wire clk,
-        input wire [9:0] x,y,
-        input wire [3:0] state,
-        output reg borderSpriteOn=0
+module monster_hp_sprite(
+    input wire clk,
+    input wire[3:0] state,
+    input wire[9:0] x,y,
+    input wire[9:0] hp,
+    output reg hpSpriteOn
     );
     
     always @(posedge clk)
     begin
-        if ((state == 1 || state == 2) && ((x>110&&x<=120&&y>90&&y<390)||(x>=520&&x<530&&y>90&&y<390)||(x>110&&x<520&&y>90&&y<=100)||(x>110&&x<520&&y>=380&&y<390)))
-            borderSpriteOn = 1;
-        else
-            borderSpriteOn = 0; 
+        if (state==1 || state==2)
+        begin
+            if (y>415 && y<=425 && x <= hp)
+                hpSpriteOn <= 1;
+            else
+                hpSpriteOn <= 0;
+        end
     end
 endmodule

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 26.05.2020 16:07:04
+// Create Date: 31.05.2020 15:02:46
 // Design Name: 
-// Module Name: bullet_sprite
+// Module Name: bullet_sprite2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module bullet_sprite(
+module bullet_sprite2(
     input wire clk,
     input wire[3:0] state,
     input wire[9:0] x,y,
@@ -28,8 +28,8 @@ module bullet_sprite(
     output wire[7:0] dataOut,
     output reg bulletSpriteOn
     );
-    reg [9:0] x_reg = 150, y_reg = 340; //initial pos of bullet
-    reg [1:0] x_dir = 1, y_dir = 0; //0 is stop, 1 is negative, 2 is positive
+    reg [9:0] x_reg = 380, y_reg = 150; //initial pos of bullet
+    reg [1:0] x_dir = 0, y_dir = 1; //0 is stop, 1 is negative, 2 is positive
     reg [9:0] address;
     reg bulletState = 0;
     localparam bulletWidth = 5;//31;
@@ -86,5 +86,4 @@ always @(posedge clk)
         end
         else bulletSpriteOn <= 0;
     end
-    
 endmodule

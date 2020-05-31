@@ -33,38 +33,88 @@ module top(
     wire[15:0] keycode;
     keyboard keyboard(clk,PS2Data,PS2Clk,keycode);
     
-//    wire pClk;
+    wire pClk;
     wire[9:0] x,y;
-    wire[1:0] state=2'b01;
-    wire collision;
+    wire[3:0] state;
+    reg[3:0] nextState=4'b0001;
+    wire collision1;
+    wire collision2;
+    wire collision3;
     wire borderSpriteOn;
     wire p_tick;
     wire[8:0] leftBorder,rightBorder,topBorder,bottomBorder;
     
-    vgaController vga(clk,btnC,Hsync,Vsync,p_tick,x,y);
+    vgaController vga(clk,btnC,Hsync,Vsync,x,y,p_tick,pClk);
     
 //    state_manager state(pClk,state);
     
-    border_sprite border(clk,x,y,state,borderSpriteOn,leftBorder,rightBorder,topBorder,bottomBorder);
-    
+    border_sprite border(clk,x,y,state,borderSpriteOn);
+    wire spacePressed;
+    wire startPressed;
     wire playerSpriteOn;
     wire[7:0] player_rgb;
-    wire[1:0] hp;
-    player_sprite player(clk,keycode,state,x,y,collision,leftBorder,rightBorder,topBorder,bottomBorder,playerSpriteOn,player_rgb,hp);
+    wire[9:0] hp;
+    player_sprite player(pClk,keycode,state,x,y,collision1,collision2,collision3,player_rgb,playerSpriteOn,hp);
+    wire bullet_rgb;
+    wire bulletSpriteOn1;
+    wire bulletSpriteOn2;
+    wire bulletSpriteOn3;
+    bullet_sprite bullet(pClk,state,x,y,collision1,bullet_rgb,bulletSpriteOn1);
+    bullet_sprite2 bullet2(pClk,state,x,y,collision2,bullet_rgb,bulletSpriteOn2);
+    bullet_sprite3 bullet3(pClk,state,x,y,collision3,bullet_rgb,bulletSpriteOn3);
     
-    wire bulletSpriteOn;
-    wire bullet_x,bullet_y;
-    bullet_sprite bullet(clk,state,x,y,leftBorder,rightBorder,topBorder,bottomBorder,bulletSpriteOn,bullet_x,bullet_y);
+    wire hpSpriteOn;
+    wire monsterHpSpriteOn;
+    wire[9:0] damage;
+    wire[9:0] monsterHp;
+    hp_sprite playerHp(pClk,state,x,y,hp,hpSpriteOn);
+    monster_hp_sprite(pClk,state,x,y,monsterHp,monsterHpSpriteOn);
+
+    collision_manager collision_detector(pClk,playerSpriteOn,
+    bulletSpriteOn1,bulletSpriteOn2,bulletSpriteOn3,
+    collision1,collision2,collision3);
     
-    reg [7:0] palette [0:191]; // 8 bit values from the 192 hex entries in the colour palette
+    monster monster(pClk,damage,spacePressed,monsterHp);
+    
+    wire attackSpriteOn;
+    attack attack(pClk,x,y,state,keycode,spacePressed,attackSpriteOn,damage);
+    
+    reg [7:0] palette [0:224]; // 8 bit values from the 192 hex entries in the colour palette
     reg [7:0] COL = 0; // background colour palette value
     initial begin
-        $readmemh("pal.mem", palette); // load 192 hex values into "palette"
+        $readmemh("heart15_pal24bit.mem", palette); // load 192 hex values into "palette"
+    end
+    reg[28:0] counter = 0;
+    
+    always @(posedge pClk)
+    begin
+        if (state==0)
+        begin
+            if (startPressed) nextState <= 1;
+        end
+        if (state==1)
+        begin
+            if (monsterHp==0) nextState <= 3;
+            if (hp == 0) nextState <= 4;
+            else if (counter >= 500000000)
+            begin
+                counter <= 0;
+                nextState <= 2;
+            end
+            else 
+                counter <= counter + 1;
+        end
+        
+        if (state==2)
+        begin
+            if (monsterHp == 0) nextState <= 3;
+            else if (spacePressed) nextState <= 1;
+        end
     end
     
-    always @(posedge clk)
+    always @(posedge pClk)
     begin
-        if (p_tick)
+        if (p_tick && state == 1)
         begin
             if (playerSpriteOn)
             begin
@@ -78,17 +128,73 @@ module top(
                 vgaGreen <= 4'hF;
                 vgaBlue <= 4'hF;
             end
-            else if (bulletSpriteOn)
+            else if (bulletSpriteOn1)
             begin
-                vgaRed <= 4'hE;
-                vgaGreen <= 4'hD;
+                vgaRed <= 4'hF;//(palette[(bullet_rgb*3)])>>4;
+                vgaGreen <= 4'hF;//(palette[(bullet_rgb*3)+1])>>4;
+                vgaBlue <= 4'h0;//(palette[(bullet_rgb*3)+2])>>4;
+            end
+            else if (bulletSpriteOn2)
+            begin
+                vgaRed <= 4'hF;//(palette[(bullet_rgb*3)])>>4;
+                vgaGreen <= 4'hF;//(palette[(bullet_rgb*3)+1])>>4;
+                vgaBlue <= 4'h0;//(palette[(bullet_rgb*3)+2])>>4;
+            end
+            else if (bulletSpriteOn3)
+            begin
+                vgaRed <= 4'hF;//(palette[(bullet_rgb*3)])>>4;
+                vgaGreen <= 4'hF;//(palette[(bullet_rgb*3)+1])>>4;
+                vgaBlue <= 4'h0;//(palette[(bullet_rgb*3)+2])>>4;
+            end
+            else if (hpSpriteOn)
+            begin
+                vgaRed <= 4'h0;
+                vgaGreen <= 4'hF;
                 vgaBlue <= 4'h0;
+                
+            end
+             else if (monsterHpSpriteOn)
+            begin
+                vgaRed <= 4'hF;
+                vgaGreen <= 4'h0;
+                vgaBlue <= 4'h0;
+                
             end
             else
             begin
                 vgaRed <= (palette[(COL*3)])>>4;           
                 vgaGreen <= (palette[(COL*3)+1])>>4;      
                 vgaBlue <= (palette[(COL*3)+2])>>4;      
+            end
+        end
+        else if(p_tick&&state==2)
+        begin
+            if (attackSpriteOn)
+            begin
+                vgaRed <= 4'hF;
+                vgaGreen <= 4'hF;
+                vgaBlue <= 4'hF;
+            end
+            else if (hpSpriteOn)
+            begin
+                vgaRed <= 4'h0;
+                vgaGreen <= 4'hF;
+                vgaBlue <= 4'h0;
+                
+            end
+            else if (monsterHpSpriteOn)
+            begin
+                vgaRed <= 4'hF;
+                vgaGreen <= 4'h0;
+                vgaBlue <= 4'h0;
+                
+            end
+            else
+            begin
+                vgaRed <= 0;
+                vgaGreen <= 0;
+                vgaBlue <= 0;
+                
             end
         end
         else
@@ -98,5 +204,5 @@ module top(
             vgaBlue <= 0;
         end
     end
-    
+    assign state = nextState;
 endmodule
