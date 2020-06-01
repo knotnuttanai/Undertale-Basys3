@@ -46,8 +46,6 @@ module top(
     
     vgaController vga(clk,btnC,Hsync,Vsync,x,y,p_tick,pClk);
     
-//    state_manager state(pClk,state);
-    
     border_sprite border(clk,x,y,state,borderSpriteOn);
     wire spacePressed;
     wire startPressed;
@@ -55,14 +53,15 @@ module top(
     wire[7:0] player_rgb;
     wire[9:0] hp;
     player_sprite player(pClk,keycode,state,x,y,collision1,collision2,collision3,player_rgb,playerSpriteOn,hp);
-    wire bullet_rgb;
     wire bulletSpriteOn1;
     wire bulletSpriteOn2;
     wire bulletSpriteOn3;
-    bullet_sprite bullet(pClk,state,x,y,collision1,bullet_rgb,bulletSpriteOn1);
-    bullet_sprite2 bullet2(pClk,state,x,y,collision2,bullet_rgb,bulletSpriteOn2);
-    bullet_sprite3 bullet3(pClk,state,x,y,collision3,bullet_rgb,bulletSpriteOn3);
-    
+    wire bulletSpriteOn4;
+    bullet_sprite bullet(pClk,state,x,y,collision1,bulletSpriteOn1);
+    bullet_sprite2 bullet2(pClk,state,x,y,collision2,bulletSpriteOn2);
+    bullet_sprite3 bullet3(pClk,state,x,y,collision3,bulletSpriteOn3);
+    bullet_sprite4 bullet4(pClk,state,x,y,bulletSpriteOn4);
+
     wire hpSpriteOn;
     wire monsterHpSpriteOn;
     wire[9:0] damage;
@@ -96,7 +95,7 @@ module top(
         begin
             if (monsterHp==0) nextState <= 3;
             if (hp == 0) nextState <= 4;
-            else if (counter >= 500000000)
+            else if (counter >= 350000000)
             begin
                 counter <= 0;
                 nextState <= 2;
@@ -142,9 +141,15 @@ module top(
             end
             else if (bulletSpriteOn3)
             begin
-                vgaRed <= 4'hF;//(palette[(bullet_rgb*3)])>>4;
+                vgaRed <= 4'h0;//(palette[(bullet_rgb*3)])>>4;
                 vgaGreen <= 4'hF;//(palette[(bullet_rgb*3)+1])>>4;
                 vgaBlue <= 4'h0;//(palette[(bullet_rgb*3)+2])>>4;
+            end
+            else if (bulletSpriteOn4)
+            begin
+                vgaRed <= 4'h8;//(palette[(bullet_rgb*3)])>>4;
+                vgaGreen <= 4'h8;//(palette[(bullet_rgb*3)+1])>>4;
+                vgaBlue <= 4'h8;//(palette[(bullet_rgb*3)+2])>>4;
             end
             else if (hpSpriteOn)
             begin

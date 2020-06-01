@@ -25,15 +25,14 @@ module bullet_sprite2(
     input wire[3:0] state,
     input wire[9:0] x,y,
     input wire collision,
-    output wire[7:0] dataOut,
     output reg bulletSpriteOn
     );
     reg [9:0] x_reg = 380, y_reg = 150; //initial pos of bullet
     reg [1:0] x_dir = 0, y_dir = 1; //0 is stop, 1 is negative, 2 is positive
     reg [9:0] address;
     reg bulletState = 0;
-    localparam bulletWidth = 5;//31;
-    localparam bulletHeight = 5;//30;
+    localparam bulletWidth = 3;//31;
+    localparam bulletHeight = 3;//30;
     
     monster_rom monster(address,clk,dataOut);
     
@@ -43,15 +42,9 @@ always @(posedge clk)
             bulletState <= 1;
         if (state==1 && bulletState==0)
         begin
-//            if (x==x_reg-1&&y==y_reg-1)
-//            begin
-//                address <= 0;
-//                bulletSpriteOn <= 1;
-//            end
-//            if (x>=x_reg && x<x_reg+bulletWidth && y>=y_reg && y<y_reg+bulletHeight)
-            if((x-x_reg)**2+(y-y_reg)**2<=25)
+            if((x-x_reg)**2+(y-y_reg)**2<=9)
             begin
-                address <= address+1;//x-x_reg + (y-y_reg)*bulletWidth;
+                address <= address+1;
                 bulletSpriteOn <= 1;
             end
             else 

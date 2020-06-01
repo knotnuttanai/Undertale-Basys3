@@ -80,15 +80,15 @@ module player_sprite(
         end
         if (collision2)
         begin
-            if (hp >= 256)
-                hp <= hp - 256;
+            if (hp >= 128)
+                hp <= hp - 128;
             else
                 hp <= 0;
         end
         if (collision3)
         begin
-            if (hp >= 256)
-                hp <= hp - 256;
+            if (hp >= 128)
+                hp <= hp + 128;
             else
                 hp <= 0;
         end
@@ -96,13 +96,6 @@ module player_sprite(
     
     always @(posedge clk)
     begin 
-//        if (state == 1 && x>=x_reg && x<x_reg+playerWidth && y>=y_reg && y<y_reg+playerHeight) 
-//        begin 
-//            playerSpriteOn = 1;
-//        end else
-//        begin
-//            playerSpriteOn = 0;
-//        end
         if (state==1)
         begin
             if (x==x_reg-1 && y==y_reg)
@@ -112,7 +105,7 @@ module player_sprite(
             end
             if (x>x_reg-1 && x<x_reg+playerWidth && y>y_reg-1 && y<y_reg+playerHeight)
             begin
-                address <= address+1;//x-x_reg + (y-y_reg)*playerWidth;
+                address <= address+1;
                 playerSpriteOn <= 1;
             end
             else 

@@ -25,7 +25,6 @@ module bullet_sprite(
     input wire[3:0] state,
     input wire[9:0] x,y,
     input wire collision,
-    output wire[7:0] dataOut,
     output reg bulletSpriteOn
     );
     reg [9:0] x_reg = 150, y_reg = 340; //initial pos of bullet
@@ -43,12 +42,6 @@ always @(posedge clk)
             bulletState <= 1;
         if (state==1 && bulletState==0)
         begin
-//            if (x==x_reg-1&&y==y_reg-1)
-//            begin
-//                address <= 0;
-//                bulletSpriteOn <= 1;
-//            end
-//            if (x>=x_reg && x<x_reg+bulletWidth && y>=y_reg && y<y_reg+bulletHeight)
             if((x-x_reg)**2+(y-y_reg)**2<=25)
             begin
                 address <= address+1;//x-x_reg + (y-y_reg)*bulletWidth;
