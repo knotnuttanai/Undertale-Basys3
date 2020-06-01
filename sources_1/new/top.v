@@ -89,12 +89,12 @@ module top(
     begin
         if (state==0)
         begin
-            if (startPressed) nextState <= 1;
+            if (startPressed) nextState <= 2;
         end
         if (state==1)
         begin
             if (monsterHp==0) nextState <= 3;
-            if (hp == 0) nextState <= 4;
+            if (hp == 0) nextState <= 3;
             else if (counter >= 350000000)
             begin
                 counter <= 0;
@@ -153,15 +153,15 @@ module top(
             end
             else if (hpSpriteOn)
             begin
-                vgaRed <= 4'h0;
+                vgaRed <= 4'hF;
                 vgaGreen <= 4'hF;
                 vgaBlue <= 4'h0;
                 
             end
              else if (monsterHpSpriteOn)
             begin
-                vgaRed <= 4'hF;
-                vgaGreen <= 4'h0;
+                vgaRed <= 4'h0;
+                vgaGreen <= 4'hF;
                 vgaBlue <= 4'h0;
                 
             end
