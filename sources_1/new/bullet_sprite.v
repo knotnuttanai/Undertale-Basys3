@@ -38,6 +38,8 @@ module bullet_sprite(
     
 always @(posedge clk)
     begin
+        if (state!=1 && bulletState!=0)
+            bulletState <= 0;
         if (collision)
             bulletState <= 1;
         if (state==1 && bulletState==0)

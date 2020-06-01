@@ -60,10 +60,10 @@ module attack(
         end
         else attackSpriteOn <= 0;
     end
-    
+    reg [19:0] counter = 0;
     always @(posedge clk)
     begin
-        if (state==2)
+        if (state==2 && counter > 350000)
         begin
             if (key[7:0]==8'h29&&key[15:8]!=8'hF0)
             begin
@@ -78,6 +78,12 @@ module attack(
                 damage <= 0;
                 spacePressed <= 0;
             end
+        end
+        else
+        begin
+            counter <= counter + 1;
+            damage <= 0;
+            spacePressed <= 0;
         end
     end
     
