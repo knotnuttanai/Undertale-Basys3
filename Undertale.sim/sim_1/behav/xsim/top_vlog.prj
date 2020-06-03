@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Undertale.srcs/sources_1/imports/hdl/PS2Receiver.v" \
+"../../../../Undertale.srcs/sources_1/new/border_sprite.v" \
+"../../../../Undertale.srcs/sources_1/new/bullet_sprite.v" \
+"../../../../Undertale.srcs/sources_1/imports/hdl/debouncer.v" \
+"../../../../Undertale.srcs/sources_1/new/heart_rom.v" \
+"../../../../Undertale.srcs/sources_1/imports/hdl/keyboard.v" \
+"../../../../Undertale.srcs/sources_1/new/player_sprite.v" \
+"../../../../Undertale.srcs/sources_1/new/vgaController.v" \
+"../../../../Undertale.srcs/sources_1/new/top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

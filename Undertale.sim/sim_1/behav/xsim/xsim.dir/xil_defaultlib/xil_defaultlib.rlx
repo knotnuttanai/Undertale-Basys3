@@ -1,0 +1,15 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/Knot/Undertale/Undertale.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sim_1/new/bulletTest.v,1590845940,verilog,,,,bulletTest,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/imports/hdl/PS2Receiver.v,1590495397,verilog,,C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/border_sprite.v,,PS2Receiver,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/imports/hdl/debouncer.v,1590495397,verilog,,C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/heart_rom.v,,debouncer,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/imports/hdl/keyboard.v,1590495397,verilog,,C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/player_sprite.v,,keyboard,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/border_sprite.v,1590838479,verilog,,C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/bullet_sprite.v,,border_sprite,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/bullet_sprite.v,1590843196,verilog,,C:/Users/Knot/Undertale/Undertale.srcs/sim_1/new/bulletTest.v,,bullet_sprite,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/heart_rom.v,1590640044,verilog,,C:/Users/Knot/Undertale/Undertale.srcs/sources_1/imports/hdl/keyboard.v,,heart_rom,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/player_sprite.v,1590845188,verilog,,C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/vgaController.v,,player_sprite,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/top.v,1590845198,verilog,,,,top,,,,,,,,
+C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/vgaController.v,1590825900,verilog,,C:/Users/Knot/Undertale/Undertale.srcs/sources_1/new/top.v,,vgaController,,,,,,,,

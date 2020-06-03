@@ -1,0 +1,112 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jun  3 21:04:00 2020
+| Host         : DESKTOP-E0REBV6 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    39 |
+| Unused register locations in slices containing registers |   190 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            5 |
+|      3 |            1 |
+|      4 |            4 |
+|      5 |            1 |
+|      6 |            1 |
+|      7 |            1 |
+|      9 |            3 |
+|     10 |           12 |
+|     12 |            4 |
+|    16+ |            7 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              58 |           34 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              86 |           34 |
+| Yes          | No                    | No                     |             164 |           72 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              86 |           25 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+------------------------------------------+------------------------------------+------------------+----------------+
+|         Clock Signal         |               Enable Signal              |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
++------------------------------+------------------------------------------+------------------------------------+------------------+----------------+
+|  CLK50MHZ                    | keyboard/uut/db_clk/clear                |                                    |                1 |              1 |
+|  CLK50MHZ                    | keyboard/uut/db_clk/O_i_1_n_0            |                                    |                1 |              1 |
+|  pClk_BUFG                   |                                          | vga/SS[0]                          |                1 |              1 |
+|  CLK50MHZ                    | keyboard/uut/db_data/Iv_i_1__0_n_0       |                                    |                1 |              1 |
+|  CLK50MHZ                    | keyboard/uut/db_data/O_i_1__0_n_0        |                                    |                1 |              1 |
+|  pClk_BUFG                   |                                          | bullet/SS[0]                       |                2 |              3 |
+| ~keyboard/uut/db_clk/O_reg_0 | keyboard/uut/cnt                         | keyboard/uut/cnt[3]_i_1_n_0        |                1 |              4 |
+|  pClk_BUFG                   |                                          | bullet2/SS[0]                      |                3 |              4 |
+|  pClk_BUFG                   |                                          | vga/H_SCAN_reg[9]_2                |                4 |              4 |
+|  pClk_BUFG                   |                                          | vga/borderSpriteOn_reg[0]          |                4 |              4 |
+|  CLK50MHZ                    | keyboard/uut/db_data/count[4]_i_1__0_n_0 | keyboard/uut/db_data/Iv_i_1__0_n_0 |                2 |              5 |
+|  clk_IBUF_BUFG               |                                          |                                    |                3 |              6 |
+|  CLK50MHZ                    |                                          |                                    |                4 |              7 |
+| ~keyboard/uut/db_clk/O_reg_0 |                                          |                                    |                3 |              9 |
+|  pClk_BUFG                   | collision_detector/collide2_reg_0        | player/hp[8]_i_1_n_0               |                3 |              9 |
+|  pClk_BUFG                   | player/address[8]_i_2_n_0                | player/address[8]_i_1_n_0          |                2 |              9 |
+|  pClk_BUFG                   | bullet2/y_reg                            |                                    |                5 |             10 |
+|  pClk_BUFG                   | bullet3/y_reg                            |                                    |                6 |             10 |
+|  pClk_BUFG                   | bullet4/y_reg[9]_i_1__3_n_0              |                                    |                4 |             10 |
+|  pClk_BUFG                   | keyboard/E[0]                            |                                    |                4 |             10 |
+|  pClk_BUFG                   | player/x_reg[9]_i_1_n_0                  |                                    |                4 |             10 |
+|  pClk_BUFG                   | vga/E[0]                                 | vga/V_SCAN_reg[2]_0[0]             |                2 |             10 |
+|  pClk_BUFG                   |                                          | keyboard/keycodev_reg[2]_1[0]      |                5 |             10 |
+|  pClk_BUFG                   | attack/spacePressed                      | attack/SR[0]                       |                3 |             10 |
+|  pClk_BUFG                   | attack/x_reg[9]_i_1__2_n_0               |                                    |                6 |             10 |
+|  pClk_BUFG                   | bullet/y_reg                             |                                    |                4 |             10 |
+|  clk_IBUF_BUFG               | pClk_BUFG                                | vga/H_SCAN                         |                4 |             10 |
+|  clk_IBUF_BUFG               | vga/V_SCAN[9]_i_1_n_0                    |                                    |                3 |             10 |
+|  pClk_BUFG                   | vga/x_dir                                |                                    |                6 |             12 |
+|  pClk_BUFG                   | vga/x_reg                                |                                    |                7 |             12 |
+|  pClk_BUFG                   | vga/x_reg_1                              |                                    |                5 |             12 |
+|  pClk_BUFG                   | vga/x_reg_3                              |                                    |                6 |             12 |
+|  CLK50MHZ                    | keyboard/uut/oflag_i_1_n_0               |                                    |                3 |             16 |
+|  clk_IBUF_BUFG               | keyboard/uut/E[0]                        |                                    |                5 |             16 |
+|  pClk_BUFG                   |                                          | start/counter0                     |                5 |             20 |
+|  pClk_BUFG                   |                                          | attack/counter0                    |                5 |             20 |
+|  pClk_BUFG                   |                                          | player/counter_reg[19]_0           |                5 |             20 |
+|  pClk_BUFG                   | player/counter0                          | player/clear                       |                8 |             29 |
+|  pClk_BUFG                   |                                          |                                    |               24 |             36 |
++------------------------------+------------------------------------------+------------------------------------+------------------+----------------+
+
+

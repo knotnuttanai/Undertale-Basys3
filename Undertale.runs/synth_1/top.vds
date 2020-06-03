@@ -1,0 +1,1157 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jun  3 21:01:50 2020
+# Process ID: 3272
+# Current directory: C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.runs/synth_1/top.vds
+# Journal file: C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20188 
+WARNING: [Synth 8-2292] literal value truncated to fit in 9 bits [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/player_sprite.v:90]
+WARNING: [Synth 8-2292] literal value truncated to fit in 9 bits [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/player_sprite.v:93]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 391.664 ; gain = 112.445
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-3876] $readmem data file 'heartpal.mem' is read successfully [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/top.v:115]
+INFO: [Synth 8-3876] $readmem data file 'monsterpal.mem' is read successfully [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/top.v:121]
+INFO: [Synth 8-6157] synthesizing module 'keyboard' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/keyboard.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/PS2Receiver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/debouncer.v:23]
+	Parameter COUNT_MAX bound to: 19 - type: integer 
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/debouncer.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/PS2Receiver.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (2#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/PS2Receiver.v:23]
+WARNING: [Synth 8-567] referenced signal 'keycodev' should be on the sensitivity list [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/keyboard.v:56]
+WARNING: [Synth 8-6014] Unused sequential element start_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/keyboard.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'keyboard' (3#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/imports/hdl/keyboard.v:23]
+INFO: [Synth 8-6157] synthesizing module 'vgaController' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/vgaController.v:22]
+	Parameter HACTIVE bound to: 640 - type: integer 
+	Parameter HBACKPORCH bound to: 48 - type: integer 
+	Parameter HFRONTPORCH bound to: 16 - type: integer 
+	Parameter HSYNC bound to: 96 - type: integer 
+	Parameter HSYNCSTART bound to: 656 - type: integer 
+	Parameter HSYNCEND bound to: 751 - type: integer 
+	Parameter LINEEND bound to: 799 - type: integer 
+	Parameter VACTIVE bound to: 480 - type: integer 
+	Parameter VBACKPORCH bound to: 33 - type: integer 
+	Parameter VFRONTPORCH bound to: 10 - type: integer 
+	Parameter VSYNC bound to: 2 - type: integer 
+	Parameter VSYNCSTART bound to: 513 - type: integer 
+	Parameter VSYNCEND bound to: 514 - type: integer 
+	Parameter SCREENEND bound to: 524 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vgaController' (4#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/vgaController.v:22]
+INFO: [Synth 8-6157] synthesizing module 'border_sprite' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/border_sprite.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'border_sprite' (5#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/border_sprite.v:23]
+INFO: [Synth 8-6157] synthesizing module 'player_sprite' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/player_sprite.v:23]
+	Parameter playerWidth bound to: 30 - type: integer 
+	Parameter playerHeight bound to: 15 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'heart_rom' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/heart_rom.v:23]
+INFO: [Synth 8-5534] Detected attribute (* ROM_STYLE = "block" *) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/heart_rom.v:29]
+INFO: [Synth 8-3876] $readmem data file 'heart.mem' is read successfully [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/heart_rom.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'heart_rom' (6#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/heart_rom.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/player_sprite.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'player_sprite' (7#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/player_sprite.v:23]
+INFO: [Synth 8-6157] synthesizing module 'bullet_sprite' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite.v:23]
+	Parameter bulletWidth bound to: 5 - type: integer 
+	Parameter bulletHeight bound to: 5 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite.v:73]
+WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'bullet_sprite' (8#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite.v:23]
+INFO: [Synth 8-6157] synthesizing module 'bullet_sprite2' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite2.v:23]
+	Parameter bulletWidth bound to: 3 - type: integer 
+	Parameter bulletHeight bound to: 3 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite2.v:73]
+WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite2.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'bullet_sprite2' (9#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite2.v:23]
+INFO: [Synth 8-6157] synthesizing module 'bullet_sprite3' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite3.v:23]
+	Parameter bulletWidth bound to: 4 - type: integer 
+	Parameter bulletHeight bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'monster_rom' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/monster_rom.v:23]
+INFO: [Synth 8-5534] Detected attribute (* ROM_STYLE = "block" *) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/monster_rom.v:29]
+INFO: [Synth 8-3876] $readmem data file 'monster.mem' is read successfully [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/monster_rom.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'monster_rom' (10#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/monster_rom.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (8) of module 'monster_rom' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite3.v:37]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite3.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'bullet_sprite3' (11#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite3.v:23]
+INFO: [Synth 8-6157] synthesizing module 'bullet_sprite4' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite4.v:23]
+	Parameter bulletWidth bound to: 4 - type: integer 
+	Parameter bulletHeight bound to: 4 - type: integer 
+WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (8) of module 'monster_rom' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite4.v:36]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite4.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'bullet_sprite4' (12#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite4.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hp_sprite' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/hp_sprite.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hp_sprite' (13#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/hp_sprite.v:23]
+INFO: [Synth 8-6157] synthesizing module 'monster_hp_sprite' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/monster_hp_sprite.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'monster_hp_sprite' (14#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/monster_hp_sprite.v:23]
+INFO: [Synth 8-6157] synthesizing module 'collision_manager' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/collision_manager.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'collision_manager' (15#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/collision_manager.v:23]
+INFO: [Synth 8-6157] synthesizing module 'monster' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/monster.v:23]
+	Parameter playerWidth bound to: 30 - type: integer 
+	Parameter playerHeight bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'monster' (16#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/monster.v:23]
+INFO: [Synth 8-6157] synthesizing module 'attack' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/attack.v:23]
+	Parameter x_center bound to: 320 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'attack' (17#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/attack.v:23]
+INFO: [Synth 8-6157] synthesizing module 'startPage' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/startPage.v:23]
+WARNING: [Synth 8-3848] Net startOn in module/entity startPage does not have driver. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/startPage.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'startPage' (18#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/startPage.v:23]
+INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+	Parameter displayText bound to: Nuttanai Kijviwattanakarn 6030200821 - type: string 
+INFO: [Synth 8-638] synthesizing module 'Font_Rom' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Font_Rom.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Font_Rom' (19#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Font_Rom.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:80]
+WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:81]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2' (20#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized0' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+	Parameter displayText bound to: Pimkunut Theerathitayangkul 6031043821 - type: string 
+WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:80]
+WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:81]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized0' (20#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized1' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+	Parameter displayText bound to: Boonyawee Kiatsilp 6031034121 - type: string 
+WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:80]
+WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:81]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized1' (20#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized2' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+	Parameter displayText bound to: Time Yongyai 6030285121) - type: string 
+WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:80]
+WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:81]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized2' (20#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized3' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+	Parameter displayText bound to: Waritphon Sriphrom 6031052421 - type: string 
+WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:80]
+WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:81]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized3' (20#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized4' [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+	Parameter displayText bound to: Press Alt to start - type: string 
+WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:80]
+WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:81]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized4' (20#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:47]
+INFO: [Synth 8-6155] done synthesizing module 'top' (21#1) [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design startPage has unconnected port startOn
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 443.332 ; gain = 164.113
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 443.332 ; gain = 164.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 443.332 ; gain = 164.113
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/constrs_1/imports/Lab03/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 786.727 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 786.727 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 786.727 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 786.727 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 786.727 ; gain = 507.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 786.727 ; gain = 507.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 786.727 ; gain = 507.508
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "O" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "cnt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5547] Trying to map ROM "memory_array" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/player_sprite.v:48]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/player_sprite.v:48]
+INFO: [Synth 8-5544] ROM "playerSpriteOn" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5547] Trying to map ROM "memory_array" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5544] ROM "bulletSpriteOn" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "monsterSpriteOn" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'x_dir_reg' in module 'attack'
+INFO: [Synth 8-5544] ROM "attackSpriteOn" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "x_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "x_dir" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/Pixel_On_Text2.vhd:60]
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nextState" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'x_dir_reg' in module 'attack'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 786.727 ; gain = 507.508
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 12    
+	   2 Input     32 Bit       Adders := 18    
+	   3 Input     32 Bit       Adders := 14    
+	   2 Input     31 Bit       Adders := 6     
+	   2 Input     17 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 13    
+	   2 Input     10 Bit       Adders := 29    
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 6     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 14    
+	   3 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 3     
+	               10 Bit    Registers := 20    
+	                8 Bit    Registers := 12    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 5     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 33    
++---Multipliers : 
+	                32x32  Multipliers := 8     
++---ROMs : 
+	                              ROMs := 10    
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 6     
+	   2 Input     10 Bit        Muxes := 15    
+	   6 Input     10 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 4     
+	   6 Input      9 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 34    
+	   2 Input      4 Bit        Muxes := 12    
+	   6 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 15    
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 43    
+	   3 Input      1 Bit        Muxes := 12    
+	  12 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 11    
+	   4 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 3     
+Module debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module PS2Receiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 2     
+Module keyboard 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module vgaController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
+Module border_sprite 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module heart_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module player_sprite 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   6 Input      9 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 1     
+Module bullet_sprite 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+Module bullet_sprite2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+Module monster_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module bullet_sprite3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 5     
++---Registers : 
+	               10 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module bullet_sprite4 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 5     
++---Registers : 
+	               10 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 2     
+Module hp_sprite 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module monster_hp_sprite 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module collision_manager 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module monster 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module attack 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 9     
+Module startPage 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Font_Rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module Pixel_On_Text2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+Module Pixel_On_Text2__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+Module Pixel_On_Text2__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+Module Pixel_On_Text2__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+Module Pixel_On_Text2__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+Module Pixel_On_Text2__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite.v:52]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite.v:52]
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite2.v:52]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite2.v:52]
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: Generating DSP bulletSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+DSP Report: operator bulletSpriteOn2 is absorbed into DSP bulletSpriteOn2.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite3.v:53]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite3.v:53]
+DSP Report: Generating DSP address2, operation Mode is: A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite4.v:42]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.srcs/sources_1/new/bullet_sprite4.v:42]
+DSP Report: Generating DSP address2, operation Mode is: A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: Generating DSP address2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator address2 is absorbed into DSP address2.
+DSP Report: operator address2 is absorbed into DSP address2.
+WARNING: [Synth 8-3331] design startPage has unconnected port startOn
+INFO: [Synth 8-3886] merging instance 'keyboard/uut/dataprev_reg[0]' (FDE) to 'keyboard/uut/keycode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'keyboard/uut/dataprev_reg[1]' (FDE) to 'keyboard/uut/keycode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'keyboard/uut/dataprev_reg[2]' (FDE) to 'keyboard/uut/keycode_reg[2]'
+INFO: [Synth 8-3886] merging instance 'keyboard/uut/dataprev_reg[3]' (FDE) to 'keyboard/uut/keycode_reg[3]'
+INFO: [Synth 8-3886] merging instance 'keyboard/uut/dataprev_reg[4]' (FDE) to 'keyboard/uut/keycode_reg[4]'
+INFO: [Synth 8-3886] merging instance 'keyboard/uut/dataprev_reg[5]' (FDE) to 'keyboard/uut/keycode_reg[5]'
+INFO: [Synth 8-3886] merging instance 'keyboard/uut/dataprev_reg[6]' (FDE) to 'keyboard/uut/keycode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'keyboard/uut/dataprev_reg[7]' (FDE) to 'keyboard/uut/keycode_reg[7]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 786.727 ; gain = 507.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------+------------------------+---------------+----------------+
+|Module Name    | RTL Object             | Depth x Width | Implemented As | 
++---------------+------------------------+---------------+----------------+
+|Pixel_On_Text2 | displayText[1]         | 64x7          | LUT            | 
+|Pixel_On_Text2 | displayText[1]         | 64x7          | LUT            | 
+|Pixel_On_Text2 | displayText[1]         | 32x7          | LUT            | 
+|Pixel_On_Text2 | displayText[1]         | 32x7          | LUT            | 
+|Pixel_On_Text2 | displayText[1]         | 32x7          | LUT            | 
+|Pixel_On_Text2 | displayText[1]         | 32x7          | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | t1/displayText[1]      | 64x7          | LUT            | 
+|top            | t1/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
+|top            | t2/displayText[1]      | 64x7          | LUT            | 
+|top            | t2/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
+|top            | t3/displayText[1]      | 32x7          | LUT            | 
+|top            | t4/displayText[1]      | 32x7          | LUT            | 
+|top            | t4/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
+|top            | t5/displayText[1]      | 32x7          | LUT            | 
+|top            | t5/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
+|top            | t6/displayText[1]      | 32x7          | LUT            | 
+|top            | t6/FontRom/fontRow_reg | 2048x8        | Block RAM      | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
+|top            | p_0_out                | 256x8         | LUT            | 
++---------------+------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|bullet_sprite  | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite  | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite  | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite  | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite  | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite  | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite2 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite2 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite2 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite2 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite2 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite2 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite2 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite2 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite3 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite3 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite3 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite3 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite3 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite3 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite3 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite3 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite4 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite4 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite4 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite4 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite4 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite4 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite4 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bullet_sprite4 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance player/i_0/heart/data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance monster/i_0/monster/data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/t1/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/t2/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2/t3/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_3/t4/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_4/t5/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_5/t6/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 831.438 ; gain = 552.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 858.984 ; gain = 579.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance player/heart/data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance monster/monster/data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance t1/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance t1/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance t3/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance t3/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance t5/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance t5/FontRom/fontRow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 882.785 ; gain = 603.566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 882.785 ; gain = 603.566
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 882.785 ; gain = 603.566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 882.785 ; gain = 603.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 882.785 ; gain = 603.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 882.785 ; gain = 603.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 882.785 ; gain = 603.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     3|
+|2     |CARRY4     |   171|
+|3     |DSP48E1    |    24|
+|4     |LUT1       |    29|
+|5     |LUT2       |   468|
+|6     |LUT3       |    85|
+|7     |LUT4       |   211|
+|8     |LUT5       |   183|
+|9     |LUT6       |   426|
+|10    |MUXF7      |    11|
+|11    |RAMB18E1   |     1|
+|12    |RAMB18E1_1 |     1|
+|13    |RAMB18E1_2 |     3|
+|14    |FDRE       |   369|
+|15    |FDSE       |    21|
+|16    |IBUF       |     4|
+|17    |OBUF       |    14|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------------------+-------------------------------+------+
+|      |Instance             |Module                         |Cells |
++------+---------------------+-------------------------------+------+
+|1     |top                  |                               |  2024|
+|2     |  attack             |attack                         |   132|
+|3     |  border             |border_sprite                  |    21|
+|4     |  bullet             |bullet_sprite                  |   172|
+|5     |  bullet2            |bullet_sprite2                 |   172|
+|6     |  bullet3            |bullet_sprite3                 |   179|
+|7     |  bullet4            |bullet_sprite4                 |   173|
+|8     |  collision_detector |collision_manager              |     6|
+|9     |  keyboard           |keyboard                       |   132|
+|10    |    uut              |PS2Receiver                    |    95|
+|11    |      db_clk         |debouncer                      |    15|
+|12    |      db_data        |debouncer_2                    |    16|
+|13    |  monster            |monster                        |   113|
+|14    |    monster          |monster_rom                    |    56|
+|15    |  nolabel_line73     |monster_hp_sprite              |     1|
+|16    |  player             |player_sprite                  |   321|
+|17    |    heart            |heart_rom                      |    70|
+|18    |  playerHp           |hp_sprite                      |     2|
+|19    |  start              |startPage                      |    33|
+|20    |  t1                 |Pixel_On_Text2                 |     9|
+|21    |    FontRom          |Font_Rom_1                     |     5|
+|22    |  t2                 |Pixel_On_Text2__parameterized0 |     4|
+|23    |  t3                 |Pixel_On_Text2__parameterized1 |     7|
+|24    |    FontRom          |Font_Rom_0                     |     3|
+|25    |  t4                 |Pixel_On_Text2__parameterized2 |     9|
+|26    |  t5                 |Pixel_On_Text2__parameterized3 |     8|
+|27    |    FontRom          |Font_Rom                       |     4|
+|28    |  t6                 |Pixel_On_Text2__parameterized4 |     3|
+|29    |  vga                |vgaController                  |   422|
++------+---------------------+-------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 882.785 ; gain = 603.566
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 882.785 ; gain = 260.172
+Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 882.785 ; gain = 603.566
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 211 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 882.785 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+136 Infos, 71 Warnings, 42 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 882.785 ; gain = 615.688
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 882.785 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Warit/Lab_Hw_syn/undertale/Undertale.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  3 21:03:02 2020...
